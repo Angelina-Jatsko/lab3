@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import com.raywenderlich.android.lab1.router.BackButtonHandler
 import com.raywenderlich.android.lab1.router.FundamentalsRouter
 import com.raywenderlich.android.lab1.router.Screen
+import kotlin.math.ceil
 
 private val items = listOf(
     Icons.Filled.Check,
@@ -38,8 +39,10 @@ fun GridScreen() {
 }
 
 @Composable
-fun GridView(columCount: Int) {
-    TODO("Not yet implemented")
+fun GridView(columCount: Int) { val itemSize = items.size
+    val rowCount = ceil(itemSize.toFloat() / columCount).toInt()
+
+
 }
 @Composable
 fun RowItem(rowItems: List<IconResource>) {
